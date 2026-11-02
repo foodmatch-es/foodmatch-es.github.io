@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FoodMatch: encuentra dónde comer, sin dar vueltas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<!-- Archivos de Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{--bg:#FFF4E6;--surface:#FFFFFF;--ink:#3B1A12;--muted:#7A4E3C;--brand:#D6371F;--accent:#FFB627;--on-accent:#3B1A12;--line:#EBCFB4;--chip-on:#D6371F;--chip-on-text:#FFFFFF;--dark:#B3261E;--dark-text:#FFF4E6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1F100B;--surface:#2D1A13;--ink:#FFEEDC;--muted:#D3B49C;--brand:#FF8A5B;--line:#4A2E22;--chip-on:#FFB627;--chip-on-text:#3B1A12;--dark:#7A1D12;--dark-text:#FFF4E6}}
+:root[data-theme="dark"]{--bg:#1F100B;--surface:#2D1A13;--ink:#FFEEDC;--muted:#D3B49C;--brand:#FF8A5B;--line:#4A2E22;--chip-on:#FFB627;--chip-on-text:#3B1A12;--dark:#7A1D12;--dark-text:#FFF4E6}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;line-height:1.05;margin:0;letter-spacing:-.02em}
+h1{font-weight:800;font-size:clamp(2.6rem,7vw,5rem)}
+h2{font-weight:800;font-size:clamp(1.9rem,4.5vw,3rem);max-width:20ch}
+h3{font-weight:500;font-size:1.35rem;line-height:1.2}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0}
+.logo{display:flex;align-items:center;gap:.5rem;font:800 1.6rem "Bricolage Grotesque",sans-serif;color:var(--ink);text-decoration:none}
+.logo span{color:var(--brand)}
+nav a{color:var(--muted);text-decoration:none;margin-left:1.25rem;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+@media(max-width:620px){nav a:not(.cta){display:none}}
+.cta{background:var(--accent);color:var(--on-accent);padding:.55rem 1.1rem;border-radius:999px;font-weight:600;text-decoration:none}
+nav a.cta{color:var(--on-accent)}
+.hero{padding:2rem 0 4rem}
+.hero p.lead{max-width:52ch;color:var(--muted);font-size:1.2rem;margin-top:1.25rem}
+.demo{margin-top:2.5rem;background:var(--surface);border:2px solid var(--ink);border-radius:20px;padding:1.25rem;display:grid;grid-template-columns:1fr 1.2fr;gap:1.5rem}
+@media(max-width:800px){.demo{grid-template-columns:1fr}}
+.demo h2{font-size:1.25rem;font-weight:800;margin-bottom:.9rem;max-width:none}
+fieldset{border:0;padding:0;margin:0 0 1rem}
+legend{font-weight:600;font-size:.9rem;color:var(--muted);padding:0;margin-bottom:.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{font:600 .92rem Figtree,sans-serif;background:transparent;color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:.4rem .85rem;cursor:pointer;min-height:40px}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-text);border-color:var(--chip-on)}
+.count{display:flex;align-items:baseline;gap:.6rem;border-bottom:1.5px solid var(--line);padding-bottom:.75rem;margin-bottom:.75rem}
+.count b{font:800 3.2rem/1 "Bricolage Grotesque",sans-serif;color:var(--brand)}
+.count span{color:var(--muted)}
+.results{list-style:none;margin:0;padding:0;display:grid;gap:.5rem;max-height:340px;overflow:auto}
+.results li{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:.65rem .8rem;border:1.5px solid var(--line);border-radius:12px}
+.results strong{display:block;line-height:1.2}
+.results small{color:var(--muted)}
+.results .m{font-weight:600;white-space:nowrap}
+.empty{padding:1.2rem;border:1.5px dashed var(--line);border-radius:12px;color:var(--muted)}
+.reset{background:none;border:0;color:var(--brand);font:600 .92rem Figtree,sans-serif;text-decoration:underline;cursor:pointer;padding:.3rem 0}
+.note{font-size:.85rem;color:var(--muted);margin-top:.8rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem}
+@media(max-width:800px){.two{grid-template-columns:1fr;gap:1.5rem}}
+.two p{color:var(--muted)}
+.big{font:500 clamp(1.4rem,3vw,2rem)/1.25 "Bricolage Grotesque",sans-serif;max-width:30ch}
+.steps{list-style:none;margin:2.5rem 0 0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:3.5rem 1fr;gap:1rem;padding:1.5rem 0;border-top:2px solid var(--ink);counter-increment:s}
+.steps li::before{content:counter(s);font:800 2.4rem/1 "Bricolage Grotesque",sans-serif;color:var(--brand)}
+.steps p{color:var(--muted);max-width:60ch;margin-top:.35rem}
+.dark{background:var(--dark);color:var(--dark-text)}
+.dark h2,.dark h3{color:var(--dark-text)}
+.dark p{color:var(--dark-text);opacity:.85}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem}
+@media(max-width:800px){.values{grid-template-columns:1fr}}
+.values div{border-left:4px solid var(--accent);padding-left:1.25rem}
+.values p{margin-top:.6rem}
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+@media(max-width:800px){.people{grid-template-columns:1fr;gap:1.5rem}}
+.people h3{margin-bottom:.5rem}
+.people p{color:var(--muted)}
+.final{text-align:left}
+.final .cta{display:inline-block;margin-top:1.5rem;font-size:1.1rem;padding:.8rem 1.6rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1.5px solid var(--line)}
+@media(prefers-reduced-motion:no-preference){.count b{transition:transform .2s}.count b.pop{transform:scale(1.12)}}
+.herogrid{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+@media(max-width:800px){.herogrid{grid-template-columns:1fr}.heroart{max-width:280px}}
+.heroart{width:100%;height:auto}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem}
+@media(max-width:800px){.strip{grid-template-columns:repeat(2,1fr)}}
+.tile{border-radius:28px;padding:1rem 1rem .8rem;text-align:center;color:#3B1A12;font-weight:600}
+.tile svg{width:80%;height:auto;display:block;margin:0 auto .4rem}
+.avatar{width:92px;height:92px;border-radius:50%;background:var(--accent);padding:12px;margin-bottom:1rem;display:block}
+.actions{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-bottom:.4rem}
+.actions .cta{padding:.55rem 1.1rem;font-weight:600}
+.results{max-height:300px}
+.results small a{color:var(--brand);font-weight:600}
+.results small{display:block}
+#bv{display:block;font:800 1.6rem/1.1 "Bricolage Grotesque",sans-serif;color:var(--brand);margin-bottom:.35rem}
+.budget input[type=range]{width:100%;height:36px;margin:0;cursor:pointer;-webkit-appearance:none;appearance:none;background:transparent}
+.budget input[type=range]::-webkit-slider-runnable-track{height:10px;border-radius:999px;background:linear-gradient(to right,var(--brand) var(--fill,100%),var(--line) var(--fill,100%))}
+.budget input[type=range]::-moz-range-track{height:10px;border-radius:999px;background:var(--line)}
+.budget input[type=range]::-moz-range-progress{height:10px;border-radius:999px;background:var(--brand)}
+.budget input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;margin-top:-9px;border-radius:50%;background:var(--accent);border:3px solid var(--ink);box-shadow:0 2px 0 var(--ink)}
+.budget input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--accent);border:3px solid var(--ink)}
+.ticks{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted)}
+.lk{background:none;border:0;padding:0;font:inherit;font-weight:600;color:var(--brand);cursor:pointer;text-decoration:underline}
+/* Estilos para el mapa de Leaflet */
+#map {
+  width: 100%;
+  height: 350px;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  margin: 1rem 0;
+  z-index: 1;
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="pizza" viewBox="0 0 100 100"><path d="M50 92 L12 22 Q50 4 88 22 Z" fill="#FFB627"/><path d="M12 22 Q50 4 88 22" stroke="#C8741A" stroke-width="9" fill="none" stroke-linecap="round"/><g fill="#D6371F"><circle cx="40" cy="34" r="7"/><circle cx="61" cy="34" r="7"/><circle cx="50" cy="57" r="7"/></g></symbol>
+<symbol id="burger" viewBox="0 0 100 100"><path d="M14 46 Q14 16 50 16 Q86 16 86 46 Z" fill="#E58B2A"/><g fill="#FFF4E6"><ellipse cx="38" cy="28" rx="3.5" ry="2"/><ellipse cx="55" cy="24" rx="3.5" ry="2"/><ellipse cx="68" cy="34" rx="3.5" ry="2"/></g><rect x="10" y="48" width="80" height="9" rx="4.5" fill="#5BA84A"/><rect x="14" y="58" width="72" height="12" rx="6" fill="#5A2A18"/><rect x="14" y="72" width="72" height="13" rx="6.5" fill="#E58B2A"/></symbol>
+<symbol id="sushi" viewBox="0 0 100 100"><rect x="14" y="46" width="72" height="32" rx="16" fill="#FFF8EE" stroke="#3B1A12" stroke-width="3"/><path d="M10 50 Q50 18 90 50 Q50 60 10 50 Z" fill="#FF7A59"/><path d="M30 42 Q38 40 44 47 M52 36 Q62 36 68 45" stroke="#FFD3C2" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="bowl" viewBox="0 0 100 100"><circle cx="28" cy="46" r="15" fill="#5BA84A"/><circle cx="50" cy="38" r="16" fill="#FFB627"/><circle cx="72" cy="46" r="15" fill="#FF7A59"/><path d="M8 52 H92 Q89 90 50 90 Q11 90 8 52 Z" fill="#D6371F"/></symbol>
+<symbol id="taco" viewBox="0 0 100 100"><path d="M8 74 A42 42 0 0 1 92 74 Z" fill="#FFB627" stroke="#C8741A" stroke-width="3"/><circle cx="30" cy="40" r="7" fill="#5BA84A"/><circle cx="50" cy="32" r="7" fill="#D6371F"/><circle cx="70" cy="40" r="7" fill="#5BA84A"/></symbol>
+<symbol id="pin" viewBox="0 0 100 100"><path d="M50 94 C18 58 20 8 50 8 C80 8 82 58 50 94 Z" fill="#D6371F"/><circle cx="50" cy="38" r="13" fill="#FFF4E6"/></symbol>
+</defs></svg>
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="#" aria-label="FoodMatch, inicio"><svg width="42" height="42" viewBox="0 0 40 40" aria-hidden="true"><circle cx="14" cy="20" r="12" fill="#D6371F"/><circle cx="26" cy="20" r="12" fill="#FFB627" fill-opacity=".92"/><path d="M20 27 C12 21 14 14.5 17.5 14.5 C19 14.5 20 15.8 20 17 C20 15.8 21 14.5 22.5 14.5 C26 14.5 28 21 20 27Z" fill="#3B1A12"/></svg>Food<span>Match</span></a>
+  <nav aria-label="Principal"><a href="#problema">El problema</a><a href="#como">Cómo funciona</a><a href="#publico">Para quién</a><a class="cta" href="#contacto">Quiero probarlo</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="herogrid"><div><h1>Decide dónde comer en menos de un minuto.</h1>
+  <p class="lead">FoodMatch localiza dónde estás, escucha tus gustos y te muestra solo los restaurantes que encajan contigo. Disponible como app y web.</p></div>
+  <svg class="heroart" viewBox="0 0 320 320" role="img" aria-label="Un plato de pizza, una hamburguesa y un marcador de ubicación"><circle cx="160" cy="170" r="140" fill="#FFB627"/><circle cx="160" cy="170" r="105" fill="#FFF4E6"/><use href="#pizza" x="85" y="95" width="150" height="150"/><circle cx="258" cy="62" r="44" fill="#FFF4E6" stroke="#3B1A12" stroke-width="4"/><use href="#pin" x="230" y="32" width="56" height="56"/><circle cx="62" cy="256" r="40" fill="#FFF4E6" stroke="#3B1A12" stroke-width="4"/><use href="#burger" x="30" y="224" width="64" height="64"/></svg></div>
+
+  <div class="demo" id="demo">
+    <div>
+      <h2>Pruébalo: cuéntanos qué te apetece</h2>
+      <div id="filters"></div>
+      <button class="reset" id="reset" type="button">Borrar filtros</button>
+    </div>
+    <div aria-live="polite">
+      <div class="count"><b id="n">0</b><span id="lbl">locales de ejemplo cerca de ti</span></div>
+      <div class="actions"><button class="chip" id="loc" type="button">Usar mi ubicación</button><a class="cta" id="gm" target="_blank" rel="noopener" href="https://www.google.com/maps">Buscar más en Google Maps</a></div>
+      
+      <div id="map" aria-label="Mapa interactivo de los locales en Palma"></div>
+      
+      <p class="note" id="locst" role="status"></p><p class="note" id="q"></p>
+      <ul class="results" id="list"></ul>
+      <p class="note">Datos cargados dinámicamente desde restaurantes.json. En el mapa, los pines numerados son los locales que encajan: púlsalos para ver su nombre o abrirlos en Google Maps. El círculo con borde blanco eres tú.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:1rem 0 2rem">
+  <h2>Para cada antojo, un local que encaja.</h2>
+  <div class="strip">
+    <div class="tile" style="background:#FFD58A"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#pizza"/></svg>Pizza</div>
+    <div class="tile" style="background:#F7B267"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#burger"/></svg>Hamburguesa</div>
+    <div class="tile" style="background:#FFC2A6"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#sushi"/></svg>Sushi</div>
+    <div class="tile" style="background:#FFE0A3"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#bowl"/></svg>Bowls</div>
+    <div class="tile" style="background:#F9A88B"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#taco"/></svg>Tacos</div>
+  </div>
+</section>
+
+<section id="problema" style="padding-top:2rem">
+  <h2>Elegir dónde comer no debería costar más que comer.</h2>
+  <div class="two">
+    <p class="big" style="color:var(--ink)">Hay cientos de locales, repartidos por mil webs y mapas. Al final, o pierdes media hora o te quedas en el primero que ves.</p>
+    <p>Acudir a un restaurante ajustado a tus gustos y particularidades sigue siendo un proceso lento e ineficaz. FoodMatch reúne la búsqueda en un solo sitio y la convierte en una decisión rápida.</p>
+  </div>
+</section>
+
+<section id="como" style="padding-top:2rem">
+  <h2>Tres pasos, de “tengo hambre” a “vamos”.</h2>
+  <ol class="steps">
+    <li><div><h3>Detectamos dónde estás</h3><p>La plataforma identifica tu ubicación para mostrarte solo lo que te queda a mano.</p></div></li>
+    <li><div><h3>Eliges tus filtros</h3><p>Describes tus gustos, preferencias y particularidades. No son filtros generales: buscan la mayor particularización posible.</p></div></li>
+    <li><div><h3>Recibes pocas opciones, buenas</h3><p>Con esa información, FoodMatch te orienta entre tus posibilidades y reduce la lista hasta lo que de verdad te interesa.</p></div></li>
+  </ol>
+</section>
+</main>
+</div>
+
+<section class="dark" id="valor">
+  <div class="wrap">
+    <h2>Lo que ganas con FoodMatch</h2>
+    <div class="values">
+      <div><h3>Ahorras tiempo</h3><p>La plataforma tiene una sola meta: orientarte hacia un local. Eso agiliza todo el proceso de selección, que es el punto crucial de la propuesta.</p></div>
+      <div><h3>Decides con facilidad</h3><p>¿Cuántas veces has elegido mal solo por el exceso de locales disponibles? Los filtros acotan al máximo las opciones para que decidir sea sencillo.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+<main>
+<section id="publico">
+  <h2>Pensado para quien tiene poco tiempo o muchas dudas.</h2>
+  <p style="margin-top:1rem;color:var(--muted);max-width:60ch">Nuestro público tiene dos problemas principales: el tiempo y la indecisión.</p>
+  <div class="people">
+    <div><svg class="avatar" viewBox="0 0 100 100" aria-hidden="true"><use href="#burger"/></svg><h3>Jóvenes</h3><p>Quieren resolver rápido y ajustarse a su bolsillo y a sus planes.</p></div>
+    <div><svg class="avatar" viewBox="0 0 100 100" aria-hidden="true"><use href="#bowl"/></svg><h3>Inexpertos</h3><p>No saben por dónde empezar a buscar. Los filtros les marcan el camino.</p></div>
+    <div><svg class="avatar" viewBox="0 0 100 100" aria-hidden="true"><use href="#pin"/></svg><h3>Turistas desorientados</h3><p>Llegan a una ciudad que no conocen y necesitan un buen sitio cerca, sin perder el día.</p></div>
+  </div>
+</section>
+
+<section id="contacto" class="final">
+  <h2>Deja de buscar. Empieza a comer.</h2>
+  <a class="cta" href="mailto:hola@foodmatch.example">Quiero probarlo</a>
+</section>
+</main>
+<footer>FoodMatch · Proyecto de app y web para descubrir restaurantes y comercios alimenticios.</footer>
+</div>
+
+<script>
+const o=s=>s.map(x=>[x,x]);
+const has=k=>(x,S)=>[...S].every(v=>x[k].includes(v));
+const G=[
+{id:'tipo',l:'Tipo de cocina',o:o(['Tapas','Mediterránea','Marisco','Arroces y paella','Mallorquina','Carnes y parrilla','Italiana','Pizza','Asiática','India','Árabe y libanesa','Hamburguesas','Mexicana','Vegana y vegetariana','Café y postres']),f:(x,S)=>S.has(x.c)},
+{id:'dieta',l:'Necesidades alimentarias',m:1,o:o(['Vegano','Vegetariano','Sin gluten','Halal']),f:has('d')},
+{id:'amb',l:'Ambiente y servicio',m:1,o:o(['Terraza','Familiar','Romántico','Grupos','Para llevar']),f:has('e')},
+{id:'mom',l:'Momento del día',o:o(['Desayuno','Comida','Cena']),f:(x,S)=>x.m.some(v=>S.has(v))},
+{id:'val',l:'Valoración en Google',o:[['4,5+ ★',4.5],['4,8+ ★',4.8]],f:(x,S)=>x.r>=[...S][0]},
+{id:'dist',l:'Distancia',o:[['Menos de 500 m',.5],['Menos de 1 km',1],['Menos de 2 km',2],['Menos de 5 km',5]],f:(x,S)=>x.k<=[...S][0]}];
+
+let P = [];
+
+const BASE={Italiana:'restaurante italiano',India:'restaurante indio','Árabe y libanesa':'restaurante libanés','Carnes y parrilla':'parrilla asador',Mallorquina:'restaurante mallorquín','Arroces y paella':'arrocería',Tapas:'tapas','Mediterránea':'restaurante mediterráneo',Marisco:'marisquería',Pizza:'pizzería','Asiática':'restaurante asiático',Hamburguesas:'hamburguesería',Mexicana:'restaurante mexicano','Vegana y vegetariana':'restaurante vegano','Café y postres':'cafetería pastelería'};
+const CENTER={lat:39.5696,lng:2.6502};
+const $=s=>document.querySelector(s);
+const sel={};let loc=null,budget=60;const btns=[];
+const LOW=[0,0,10,20,40],RNG=['','hasta 10 €','10–20 €','20–40 €','más de 40 €'];
+G.forEach(g=>sel[g.id]=new Set());
+
+function km(a,b){const R=6371,t=Math.PI/180,dl=(b.lat-a.lat)*t,dn=(b.lng-a.lng)*t;
+ const h=Math.sin(dl/2)**2+Math.cos(a.lat*t)*Math.cos(b.lat*t)*Math.sin(dn/2)**2;return 2*R*Math.asin(Math.sqrt(h))}
+
+function sliderFs(){
+ const fs=document.createElement('fieldset');
+ fs.innerHTML='<legend>Presupuesto por persona</legend><div class="budget"><output id="bv" for="budget"></output><input id="budget" type="range" min="5" max="60" step="5" value="60" aria-label="Presupuesto máximo por persona en euros"><div class="ticks" aria-hidden="true"><span>5 €</span><span>20 €</span><span>40 €</span><span>60 € o más</span></div></div>';
+ fs.querySelector('input').oninput=e=>{budget=+e.target.value;paint()};
+ return fs;
+}
+
+function build(){
+ const box=$('#filters');
+ box.innerHTML = '';
+ G.forEach(g=>{
+  const fs=document.createElement('fieldset'),lg=document.createElement('legend'),ch=document.createElement('div');
+  lg.textContent=g.l;ch.className='chips';fs.append(lg,ch);box.appendChild(fs);
+  if(g.id==='tipo')box.appendChild(sliderFs());
+  g.o.forEach(([l,v])=>{
+   const b=document.createElement('button');
+   b.type='button';b.className='chip';b.textContent=l;b.setAttribute('aria-pressed','false');
+   b.onclick=()=>{const S=sel[g.id];
+    if(g.m){S.has(v)?S.delete(v):S.add(v)}else{const had=S.has(v);S.clear();if(!had)S.add(v)}
+    paint()};
+   ch.appendChild(b);btns.push([g.id,v,b]);
+  });
+ });
+}
+
+function query(){
+ const t=[...sel.tipo][0],x=[];
+ if(budget<=10)x.push('económico');
+ ['dieta','amb','mom'].forEach(k=>sel[k].forEach(v=>x.push(v.toLowerCase())));
+ if(sel.val.size)x.push('mejor valorado');
+ return((BASE[t]||'restaurante')+' '+x.join(' ')).trim();
+}
+
+function mapsUrl(){
+ const q=query(),d=[...sel.dist][0],z=d<=.5?17:d<=1?16:d<=2?15:14;
+ return loc?'https://www.google.com/maps/search/'+encodeURIComponent(q)+'/@'+loc.lat.toFixed(5)+','+loc.lng.toFixed(5)+','+z+'z'
+  :'https://www.google.com/maps/search/'+encodeURIComponent(q+' Palma de Mallorca');
+}
+
+function link(t,u){const a=document.createElement('a');a.textContent=t;a.href=u;a.target='_blank';a.rel='noopener';return a}
+const fmt=x=>x.toFixed(1).replace('.',',');
+
+// Inicializar el mapa de Leaflet
+const map = L.map('map').setView([CENTER.lat, CENTER.lng], 14);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?api_key=cb1_4zim_1_1463b8c79a5207727aac553d', {
+    maxZoom: 19,
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+const markersLayer = L.layerGroup().addTo(map);
+let userMarker = null;
+
+function mapBtn(x){
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'lk'; b.textContent = 'Ver en el mapa';
+    b.onclick = () => {
+        map.setView([x.la, x.ln], 17);
+        document.getElementById('map').scrollIntoView({behavior: 'smooth', block: 'center'});
+    };
+    return b;
+}
+
+function paint(){
+    btns.forEach(([id,v,b])=>b.setAttribute('aria-pressed',sel[id].has(v)));
+    $('#bv').textContent = budget >= 60 ? 'Sin límite' : 'Hasta ' + budget + ' €';
+    const bi = $('#budget'); bi.value = budget; bi.style.setProperty('--fill',((budget-5)/55*100)+'%');
+    const from = loc || CENTER;
+    
+    P.forEach(x => x.k = km(from, {lat: x.la, lng: x.ln}));
+    const r = P.filter(x => G.every(g => !sel[g.id].size || g.f(x, sel[g.id])) && LOW[x.p] <= budget).sort((a,b) => a.k - b.k);
+    
+    const n = $('#n'); n.textContent = r.length;
+    n.classList.add('pop'); setTimeout(() => n.classList.remove('pop'), 180);
+    $('#lbl').textContent = r.length === P.length ? 'locales en Palma' : r.length === 1 ? 'local que encaja contigo' : 'locales que encajan contigo';
+    
+    const ul = $('#list'); ul.innerHTML = '';
+    
+    if(!r.length){
+        const li = document.createElement('li'); li.className = 'empty';
+        li.textContent = 'Ningún local cumple todo a la vez. Quita un filtro o pulsa “Buscar más en Google Maps”.';
+        ul.appendChild(li);
+    }
+
+    markersLayer.clearLayers();
+    const bounds = L.latLngBounds();
+
+    r.forEach((x, i) => {
+        const li = document.createElement('li'), d = document.createElement('div'), s = document.createElement('strong'), sm = document.createElement('small'), ln = document.createElement('small');
+        s.textContent = (r.length <= 15 ? (i+1)+'. ' : '') + x.n;
+        sm.textContent = x.c + ' · ≈ ' + RNG[x.p] + ' · ' + fmt(x.r) + ' ★ (' + x.rc.toLocaleString('es-ES') + ') · ' + x.ad;
+        const q = encodeURIComponent(x.n + ' ' + x.ad + ' Palma');
+        ln.append(
+            link('Abrir en Google Maps','https://www.google.com/maps/search/?api=1&query='+q+'&query_place_id='+x.id), 
+            document.createTextNode(' · '), 
+            link('Cómo llegar','https://www.google.com/maps/dir/?api=1&destination='+q+'&destination_place_id='+x.id), 
+            document.createTextNode(' · '), 
+            mapBtn(x)
+        );
+        d.append(s, sm, ln);
+        const m = document.createElement('span'); m.className = 'm';
+        m.textContent = x.k < 1 ? Math.round(x.k*100)*10 + ' m' : fmt(x.k) + ' km';
+        li.append(d, m); ul.appendChild(li);
+
+        const iconHtml = (r.length <= 15) 
+            ? `<div style="background:var(--brand);color:white;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-weight:bold;border:2px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3);">${i+1}</div>`
+            : `<div style="background:var(--brand);border-radius:50%;width:14px;height:14px;border:2px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3);"></div>`;
+
+        const customIcon = L.divIcon({ html: iconHtml, className: '', iconSize: [24, 24] });
+        
+        const marker = L.marker([x.la, x.ln], { icon: customIcon })
+            .bindPopup(`<b>${x.n}</b><br>${x.c} · ${fmt(x.r)} ★`);
+        markersLayer.addLayer(marker);
+        bounds.extend([x.la, x.ln]);
+    });
+
+    if(loc){
+        if(userMarker) map.removeLayer(userMarker);
+        userMarker = L.circleMarker([loc.lat, loc.lng], {
+            color: '#fff', fillColor: 'var(--accent)', fillOpacity: 1, radius: 8, weight: 2
+        }).addTo(map).bindPopup('<b>Tu ubicación</b>');
+        bounds.extend([loc.lat, loc.lng]);
+    }
+
+    if (r.length > 0 && r.length < P.length) {
+        map.fitBounds(bounds, { padding: [30, 30] });
+    } else if (r.length === P.length) {
+        map.setView([CENTER.lat, CENTER.lng], 14);
+    }
+
+    $('#gm').href = mapsUrl();
+    $('#q').textContent = 'Búsqueda en Google Maps: “' + query() + '”';
+}
+
+$('#loc').onclick = () => {
+    const s = $('#locst');
+    try {
+        if(!navigator.geolocation) { s.textContent = 'Tu navegador no permite detectar la ubicación.'; return; }
+        s.textContent = 'Buscando tu ubicación…';
+        navigator.geolocation.getCurrentPosition(
+            p => { loc = {lat: p.coords.latitude, lng: p.coords.longitude}; s.textContent = 'Distancias medidas desde tu ubicación.'; paint(); },
+            () => { s.textContent = 'No pudimos acceder a tu ubicación. Activa el permiso en el navegador.'; },
+            {timeout: 8000}
+        );
+    } catch(e) { s.textContent = 'No pudimos acceder a tu ubicación.'; }
+};
+
+$('#locst').textContent = 'Distancias medidas desde el centro de Palma. Pulsa “Usar mi ubicación” para medir desde donde estás.';
+$('#reset').onclick = () => { G.forEach(g => sel[g.id].clear()); budget = 60; paint(); };
+
+async function cargarRestaurantes() {
+    try {
+        const respuesta = await fetch('restaurantes.json');
+        if (!respuesta.ok) throw new Error('No se pudo cargar restaurantes.json');
+        P = await respuesta.json();
+        build();
+        paint();
+    } catch (error) {
+        console.error('Error al cargar la base de datos:', error);
+        $('#list').innerHTML = '<li class="empty">Error al cargar los restaurantes, porfavor reinicia la pagina web.</li>';
+    }
+}
+
+cargarRestaurantes();
+</script>
+</body>
+</html>

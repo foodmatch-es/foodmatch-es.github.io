@@ -1,0 +1,1614 @@
+[
+  {
+    "n": "Tapas Palma Centre",
+    "c": "Tapas",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.7,
+    "rc": 1613,
+    "la": 39.5717048,
+    "ln": 2.6497425,
+    "ad": "Plaça de Weyler, 1",
+    "id": "ChIJbc2KZk2TlxIRU3eOLjhhD14",
+    "k": 0
+  },
+  {
+    "n": "Bar Espanya",
+    "c": "Tapas",
+    "p": 2,
+    "d": [
+      "Vegetariano"
+    ],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 6187,
+    "la": 39.5709057,
+    "ln": 2.6509374,
+    "ad": "Carrer de Can Escursac, 12",
+    "id": "ChIJsRjXM1CSlxIRIz6BTgWxEV8",
+    "k": 0
+  },
+  {
+    "n": "Antigua Esquina Palma",
+    "c": "Tapas",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 890,
+    "la": 39.5727961,
+    "ln": 2.6515343,
+    "ad": "Carrer Arabí, 5",
+    "id": "ChIJyYcKXQCTlxIRyARvGrYKGUQ",
+    "k": 0
+  },
+  {
+    "n": "Little Tapas Place",
+    "c": "Tapas",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Familiar"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 495,
+    "la": 39.568189,
+    "ln": 2.6450601,
+    "ad": "Carrer de la Boteria, 4",
+    "id": "ChIJP3rN9ICTlxIRLs4uTTg7pWc",
+    "k": 0
+  },
+  {
+    "n": "FERVOR",
+    "c": "Mediterránea",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 3363,
+    "la": 39.5705867,
+    "ln": 2.6526789,
+    "ad": "Carrer dels Hostals, 4",
+    "id": "ChIJ84-R51GSlxIR0dDH6VOAVkQ",
+    "k": 0
+  },
+  {
+    "n": "Restaurant la Parada del Mar",
+    "c": "Marisco",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 4696,
+    "la": 39.551927,
+    "ln": 2.611877,
+    "ad": "Avinguda de Joan Miró, 244",
+    "id": "ChIJLcBn8fCNlxIRxfkvkXx8EiI",
+    "k": 0
+  },
+  {
+    "n": "Ca n'Eduardo",
+    "c": "Marisco",
+    "p": 3,
+    "d": [],
+    "e": [
+      "Grupos"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.2,
+    "rc": 2824,
+    "la": 39.5684507,
+    "ln": 2.6406613,
+    "ad": "Contramoll Mollet, 3",
+    "id": "ChIJJycPiEGSlxIRevHcURxdSM8",
+    "k": 0
+  },
+  {
+    "n": "Ca'n Manolo",
+    "c": "Marisco",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 1323,
+    "la": 39.5671516,
+    "ln": 2.6283033,
+    "ad": "Carrer Federico García Lorca, 4",
+    "id": "ChIJV8uv23GSlxIRmPDBzVW8BP8",
+    "k": 0
+  },
+  {
+    "n": "Pomelia Sea Lab Mallorca",
+    "c": "Marisco",
+    "p": 4,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.7,
+    "rc": 444,
+    "la": 39.5709239,
+    "ln": 2.6442129,
+    "ad": "Carrer de Can Sales, 2",
+    "id": "ChIJKTTJkaSTlxIRdx4jVkJCLQo",
+    "k": 0
+  },
+  {
+    "n": "Pizzeria Victoria Palma",
+    "c": "Pizza",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Familiar"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 5.0,
+    "rc": 349,
+    "la": 39.5706318,
+    "ln": 2.6371313,
+    "ad": "Carrer de Sant Magí, 54",
+    "id": "ChIJxcyh392TlxIR6UpLySOfmUI",
+    "k": 0
+  },
+  {
+    "n": "Mama’s Santa Catalina",
+    "c": "Pizza",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Familiar"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 1752,
+    "la": 39.5705853,
+    "ln": 2.6357736,
+    "ad": "Carrer de Sant Magí, 80",
+    "id": "ChIJCxiRkfqTlxIR48tGB2SzneE",
+    "k": 0
+  },
+  {
+    "n": "Infinito Pizzeria Napoletana",
+    "c": "Pizza",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Familiar"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.9,
+    "rc": 1116,
+    "la": 39.5726191,
+    "ln": 2.6554884,
+    "ad": "Plaça Alexandre Jaume, 8",
+    "id": "ChIJL20BTaKTlxIR_rw2jMw2LEE",
+    "k": 0
+  },
+  {
+    "n": "MANI Pizza & Cucina",
+    "c": "Pizza",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza",
+      "Grupos"
+    ],
+    "m": [
+      "Cena"
+    ],
+    "r": 4.7,
+    "rc": 190,
+    "la": 39.5779634,
+    "ln": 2.6521803,
+    "ad": "Carrer del 31 de Desembre, 1",
+    "id": "ChIJz3HB6wSTlxIRYNwB5HKpyhw",
+    "k": 0
+  },
+  {
+    "n": "Bankai Palma",
+    "c": "Asiática",
+    "p": 3,
+    "d": [
+      "Sin gluten"
+    ],
+    "e": [],
+    "m": [
+      "Cena"
+    ],
+    "r": 4.9,
+    "rc": 255,
+    "la": 39.5719931,
+    "ln": 2.6375419,
+    "ad": "Carrer de Cotoner, 27",
+    "id": "ChIJU2BnWhyTlxIRFtBscKdujMI",
+    "k": 0
+  },
+  {
+    "n": "KAIZEN Restaurant",
+    "c": "Asiática",
+    "p": 4,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.9,
+    "rc": 1708,
+    "la": 39.570056,
+    "ln": 2.651267,
+    "ad": "Carrer de l'Argenteria, 7",
+    "id": "ChIJ3z8kJYiTlxIRegbUBe_bATg",
+    "k": 0
+  },
+  {
+    "n": "Marui Sushi Bar",
+    "c": "Asiática",
+    "p": 4,
+    "d": [
+      "Vegetariano"
+    ],
+    "e": [
+      "Familiar"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 432,
+    "la": 39.5717634,
+    "ln": 2.6355134,
+    "ad": "Plaça del Progrés, 17",
+    "id": "ChIJ5TRkUCiTlxIRmkSyo8uIlbU",
+    "k": 0
+  },
+  {
+    "n": "La nueva burguesa",
+    "c": "Hamburguesas",
+    "p": 2,
+    "d": [
+      "Sin gluten"
+    ],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 2706,
+    "la": 39.5705703,
+    "ln": 2.6359817,
+    "ad": "Carrer de Sant Magí, 76",
+    "id": "ChIJ-fKoK2aSlxIRSpaNEKLJog4",
+    "k": 0
+  },
+  {
+    "n": "Badal Corner",
+    "c": "Hamburguesas",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 3425,
+    "la": 39.5736303,
+    "ln": 2.6542886,
+    "ad": "Plaça del Comtat del Rosselló, 7",
+    "id": "ChIJU93S3VOSlxIRFFVRA4V7hK4",
+    "k": 0
+  },
+  {
+    "n": "Guarango Smash Burgers",
+    "c": "Hamburguesas",
+    "p": 2,
+    "d": [
+      "Sin gluten"
+    ],
+    "e": [],
+    "m": [
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 996,
+    "la": 39.570167,
+    "ln": 2.6536589,
+    "ad": "Carrer del Pes de la Farina, 10",
+    "id": "ChIJh_EN9YqTlxIRI2UhrAxuo9U",
+    "k": 0
+  },
+  {
+    "n": "Primo Taquería",
+    "c": "Mexicana",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.4,
+    "rc": 3366,
+    "la": 39.5723546,
+    "ln": 2.6384189,
+    "ad": "Carrer de la Fàbrica, 29",
+    "id": "ChIJUfNNhGeSlxIR_wxVwL4VTPs",
+    "k": 0
+  },
+  {
+    "n": "L'Informal Tacos",
+    "c": "Mexicana",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Para llevar"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 2049,
+    "la": 39.571362,
+    "ln": 2.654532,
+    "ad": "Plaça Nova de la Ferreria, 5",
+    "id": "ChIJexmMn3OTlxIRpCN9FJmFjig",
+    "k": 0
+  },
+  {
+    "n": "Ca n'Ela Restaurant Vegà",
+    "c": "Vegana y vegetariana",
+    "p": 2,
+    "d": [
+      "Vegano",
+      "Vegetariano",
+      "Sin gluten"
+    ],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 2505,
+    "la": 39.5682543,
+    "ln": 2.6455447,
+    "ad": "Carrer de la Mar, 16",
+    "id": "ChIJw3DBAqCTlxIRbqeIyFO6WCI",
+    "k": 0
+  },
+  {
+    "n": "La Mujer De Verde",
+    "c": "Vegana y vegetariana",
+    "p": 2,
+    "d": [
+      "Vegano",
+      "Vegetariano"
+    ],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 1367,
+    "la": 39.5706341,
+    "ln": 2.64277,
+    "ad": "Plaça de la Porta de Santa Catalina, 1",
+    "id": "ChIJRwyiUoKTlxIRXlCyUUmozJw",
+    "k": 0
+  },
+  {
+    "n": "Mouna",
+    "c": "Vegana y vegetariana",
+    "p": 3,
+    "d": [
+      "Vegetariano"
+    ],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 487,
+    "la": 39.5691853,
+    "ln": 2.643996,
+    "ad": "Plaça de la Drassana, 15",
+    "id": "ChIJuRHaRJiTlxIRoq4lF_myd8k",
+    "k": 0
+  },
+  {
+    "n": "Temple Natura Café Garden",
+    "c": "Vegana y vegetariana",
+    "p": 2,
+    "d": [
+      "Vegano",
+      "Vegetariano"
+    ],
+    "e": [
+      "Terraza",
+      "Romántico"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.7,
+    "rc": 1638,
+    "la": 39.5677547,
+    "ln": 2.6545664,
+    "ad": "Carrer del Temple, 4",
+    "id": "ChIJAUT-zk2SlxIRW2cuXmUswqo",
+    "k": 0
+  },
+  {
+    "n": "Simply Son Braho",
+    "c": "Vegana y vegetariana",
+    "p": 2,
+    "d": [
+      "Vegano",
+      "Vegetariano"
+    ],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida"
+    ],
+    "r": 4.8,
+    "rc": 191,
+    "la": 39.572614,
+    "ln": 2.6390972,
+    "ad": "Carrer de Pou, 16",
+    "id": "ChIJWxf4yfaTlxIRz0-nU9_YTpU",
+    "k": 0
+  },
+  {
+    "n": "MISE EN PLACE Brunch & Bakery",
+    "c": "Café y postres",
+    "p": 1,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Desayuno",
+      "Comida"
+    ],
+    "r": 4.3,
+    "rc": 872,
+    "la": 39.5710243,
+    "ln": 2.6521077,
+    "ad": "Plaça Major, 10",
+    "id": "ChIJ0Q-4xlGSlxIRs3ZWqAELgW0",
+    "k": 0
+  },
+  {
+    "n": "Esquina Bakery",
+    "c": "Café y postres",
+    "p": 1,
+    "d": [],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida"
+    ],
+    "r": 4.5,
+    "rc": 111,
+    "la": 39.5658058,
+    "ln": 2.6704551,
+    "ad": "Avinguda Mèxic, 13",
+    "id": "ChIJ3QRsHWWTlxIRlcOLtfXlHZE",
+    "k": 0
+  },
+  {
+    "n": "Bakery Andre Cake’s",
+    "c": "Café y postres",
+    "p": 1,
+    "d": [],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida"
+    ],
+    "r": 4.9,
+    "rc": 142,
+    "la": 39.578883,
+    "ln": 2.6344167,
+    "ad": "Carrer de Vicenç Joan i Rosselló, 46",
+    "id": "ChIJf_OdvuiTlxIR7VEX8CmGylg",
+    "k": 0
+  },
+  {
+    "n": "Rosevelvet",
+    "c": "Café y postres",
+    "p": 1,
+    "d": [],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida"
+    ],
+    "r": 4.4,
+    "rc": 1319,
+    "la": 39.5775423,
+    "ln": 2.6503454,
+    "ad": "Carrer de Font i Monteros, 22",
+    "id": "ChIJA0Qx31CSlxIR7KYVawEsv28",
+    "k": 0
+  },
+  {
+    "n": "Arrosseria Sa Cranca",
+    "c": "Arroces y paella",
+    "p": 3,
+    "d": [
+      "Sin gluten"
+    ],
+    "e": [
+      "Para llevar"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.3,
+    "rc": 3374,
+    "la": 39.568021,
+    "ln": 2.6305423,
+    "ad": "Avinguda de Gabriel Roca, 13",
+    "id": "ChIJkSU9s2-SlxIRqQNqPo4RWpo",
+    "k": 0
+  },
+  {
+    "n": "Restaurant Casa Julio",
+    "c": "Mallorquina",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.3,
+    "rc": 6391,
+    "la": 39.5697871,
+    "ln": 2.6508265,
+    "ad": "Carrer de la Previsió, 4",
+    "id": "ChIJQ_qo1k-SlxIRNSv9BDRqgeE",
+    "k": 0
+  },
+  {
+    "n": "Pasta e Pesto",
+    "c": "Italiana",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 801,
+    "la": 39.5712647,
+    "ln": 2.6484525,
+    "ad": "Plaça del Mercat, 4",
+    "id": "ChIJ1bbm1y6TlxIRMs__-5TmjqI",
+    "k": 0
+  },
+  {
+    "n": "Gigi’s Piccolo Ristorante",
+    "c": "Italiana",
+    "p": 2,
+    "d": [
+      "Sin gluten"
+    ],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 1343,
+    "la": 39.5733394,
+    "ln": 2.6547928,
+    "ad": "Carrer de Cazador, 3",
+    "id": "ChIJ586ox1OSlxIRAXeU5zFMHSc",
+    "k": 0
+  },
+  {
+    "n": "Bendito Gusto",
+    "c": "Italiana",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.9,
+    "rc": 1455,
+    "la": 39.5717527,
+    "ln": 2.6375191,
+    "ad": "Carrer d'Aníbal, 26",
+    "id": "ChIJj_OCaFeTlxIRDE9To4HrJX0",
+    "k": 0
+  },
+  {
+    "n": "Osteria de Plaça Sant Francesc",
+    "c": "Italiana",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.5,
+    "rc": 1046,
+    "la": 39.5687831,
+    "ln": 2.6522023,
+    "ad": "Plaça de Sant Francesc, 2",
+    "id": "ChIJjYLpySiTlxIR-muxjVEvbn8",
+    "k": 0
+  },
+  {
+    "n": "Madras Indian Restaurant",
+    "c": "India",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 1613,
+    "la": 39.5686521,
+    "ln": 2.6318962,
+    "ad": "Avinguda de Gabriel Roca, 8",
+    "id": "ChIJh-2ZVyqTlxIRTxrHvZr2dD4",
+    "k": 0
+  },
+  {
+    "n": "Krishna Curry Bar",
+    "c": "India",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.9,
+    "rc": 1893,
+    "la": 39.5702811,
+    "ln": 2.6388279,
+    "ad": "Carrer de Sant Magí, 11",
+    "id": "ChIJTfIWEYyTlxIRe8BhXfz080I",
+    "k": 0
+  },
+  {
+    "n": "Jaipur Tandoori",
+    "c": "India",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza",
+      "Para llevar"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.7,
+    "rc": 2904,
+    "la": 39.5720445,
+    "ln": 2.6396915,
+    "ad": "Carrer de la Fàbrica, 5",
+    "id": "ChIJEUmdbl2SlxIRAUgt4EO4dYM",
+    "k": 0
+  },
+  {
+    "n": "Restaurante Libanés Rotana",
+    "c": "Árabe y libanesa",
+    "p": 3,
+    "d": [
+      "Vegetariano"
+    ],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 1297,
+    "la": 39.5715612,
+    "ln": 2.6377131,
+    "ad": "Carrer d'Aníbal, 21",
+    "id": "ChIJSw242WeSlxIRu0umbaMcC14",
+    "k": 0
+  },
+  {
+    "n": "Byblos Palma",
+    "c": "Árabe y libanesa",
+    "p": 2,
+    "d": [
+      "Vegetariano"
+    ],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 498,
+    "la": 39.5694965,
+    "ln": 2.633695,
+    "ad": "Carrer del Torrent, 5",
+    "id": "ChIJK21NekWTlxIReFvswE6FnZE",
+    "k": 0
+  },
+  {
+    "n": "La Damasco",
+    "c": "Árabe y libanesa",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.4,
+    "rc": 148,
+    "la": 39.5623116,
+    "ln": 2.6255309,
+    "ad": "Avinguda de Joan Miró, 41",
+    "id": "ChIJETIFLgCTlxIRDQmg66iHu8c",
+    "k": 0
+  },
+  {
+    "n": "Arab Dream Palma",
+    "c": "Árabe y libanesa",
+    "p": 2,
+    "d": [
+      "Halal"
+    ],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.5,
+    "rc": 408,
+    "la": 39.5715635,
+    "ln": 2.6588647,
+    "ad": "Carrer de Manacor, 17",
+    "id": "ChIJD9bhzxSTlxIRKV8wbuwgPhw",
+    "k": 0
+  },
+  {
+    "n": "Asador Bolixe",
+    "c": "Carnes y parrilla",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.7,
+    "rc": 1794,
+    "la": 39.57887,
+    "ln": 2.6569822,
+    "ad": "Carrer d'Eusebi Estada, 33",
+    "id": "ChIJjeWuFFWSlxIRwQ-Zuncfiuw",
+    "k": 0
+  },
+  {
+    "n": "Parrilla Casa Rolando",
+    "c": "Carnes y parrilla",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 202,
+    "la": 39.5697217,
+    "ln": 2.6458614,
+    "ad": "Carrer de l'Estanc, 4",
+    "id": "ChIJ-du3AMuTlxIRt1D3ddmQ5J0",
+    "k": 0
+  },
+  {
+    "n": "Celler Pagès",
+    "c": "Mallorquina",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 1451,
+    "la": 39.569562,
+    "ln": 2.645717,
+    "ad": "Carrer de Felip Bauzà, 2",
+    "id": "ChIJm47y0ESSlxIRaBa-KVfwbQc",
+    "k": 0
+  },
+  {
+    "n": "Celler de sa Premsa",
+    "c": "Mallorquina",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.2,
+    "rc": 7383,
+    "la": 39.5757905,
+    "ln": 2.6500208,
+    "ad": "Plaça del Bisbe Berenguer de Palou, 8",
+    "id": "ChIJYZvSR1eSlxIRlwx_iQzetOE",
+    "k": 0
+  },
+  {
+    "n": "Casa Maruka",
+    "c": "Mallorquina",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 1955,
+    "la": 39.5776509,
+    "ln": 2.6538084,
+    "ad": "Carrer de la Reina Maria Cristina, 7",
+    "id": "ChIJmTMWK1SSlxIRlSplGrkFWpM",
+    "k": 0
+  },
+  {
+    "n": "A Dins Palma",
+    "c": "Mallorquina",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida"
+    ],
+    "r": 4.7,
+    "rc": 160,
+    "la": 39.5772924,
+    "ln": 2.6492188,
+    "ad": "Carrer de Pere Dezcallar i Net, 11",
+    "id": "ChIJadtNLW6TlxIR1fWZvICkAyw",
+    "k": 0
+  },
+  {
+    "n": "Alma Portixol",
+    "c": "Arroces y paella",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.3,
+    "rc": 657,
+    "la": 39.561686,
+    "ln": 2.6648281,
+    "ad": "Passeig Portitxol, 4",
+    "id": "ChIJb8Q1V2WTlxIRaVTz1MEn-H4",
+    "k": 0
+  },
+  {
+    "n": "El Marino Portixol",
+    "c": "Marisco",
+    "p": 4,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.7,
+    "rc": 883,
+    "la": 39.5603204,
+    "ln": 2.6706424,
+    "ad": "Carrer de la Sirena, 1",
+    "id": "ChIJ-cP0TsuTlxIR12gYHSqnqvM",
+    "k": 0
+  },
+  {
+    "n": "Periplo Portixol",
+    "c": "Mediterránea",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.3,
+    "rc": 746,
+    "la": 39.5592439,
+    "ln": 2.6729784,
+    "ad": "Carrer del Vicari Joaquim Fuster, 67",
+    "id": "ChIJwWxCbEeTlxIR1Zks9MpIWfE",
+    "k": 0
+  },
+  {
+    "n": "Restaurant Ola del Mar",
+    "c": "Arroces y paella",
+    "p": 3,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.4,
+    "rc": 1808,
+    "la": 39.560513,
+    "ln": 2.6709809,
+    "ad": "Carrer del Vicari Joaquim Fuster, 1",
+    "id": "ChIJeTQXYLiTlxIRrjr48d7aOxo",
+    "k": 0
+  },
+  {
+    "n": "Petit Nola",
+    "c": "Mediterránea",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.4,
+    "rc": 612,
+    "la": 39.5587637,
+    "ln": 2.6745697,
+    "ad": "Carrer del Vicari Joaquim Fuster, 95",
+    "id": "ChIJJUptf2iTlxIRii2YakLkmgw",
+    "k": 0
+  },
+  {
+    "n": "LA KATA",
+    "c": "Arroces y paella",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 233,
+    "la": 39.5640465,
+    "ln": 2.6743781,
+    "ad": "Carrer de Quito, 2A",
+    "id": "ChIJKcNOTSCTlxIRP9PCLrEzmTA",
+    "k": 0
+  },
+  {
+    "n": "Vent Portixol",
+    "c": "Café y postres",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Desayuno",
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 332,
+    "la": 39.5587568,
+    "ln": 2.6741205,
+    "ad": "Carrer del Vicari Joaquim Fuster, 85",
+    "id": "ChIJCXqS73KTlxIRy7cUjdLJQCc",
+    "k": 0
+  },
+  {
+    "n": "ARTWALL Bar - Restaurant",
+    "c": "Carnes y parrilla",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.3,
+    "rc": 57,
+    "la": 39.5688589,
+    "ln": 2.6303957,
+    "ad": "Carrer del Marquès de la Sènia, 34",
+    "id": "ChIJCRzNmO2TlxIRQBVNPf4hRrA",
+    "k": 0
+  },
+  {
+    "n": "Restaurante Mekeni",
+    "c": "Asiática",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 373,
+    "la": 39.5664895,
+    "ln": 2.6268293,
+    "ad": "Avinguda de Joan Miró, 16",
+    "id": "ChIJiYaPrmqTlxIRP5P6iPQVQsc",
+    "k": 0
+  },
+  {
+    "n": "Humo - Carnes y Pescados a la Brasa",
+    "c": "Carnes y parrilla",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 813,
+    "la": 39.5704755,
+    "ln": 2.6290157,
+    "ad": "Carrer d'Andrea Doria, 21",
+    "id": "ChIJwfMCEwiTlxIR6DwG7pgFDVo",
+    "k": 0
+  },
+  {
+    "n": "Tres Mares",
+    "c": "Marisco",
+    "p": 3,
+    "d": [],
+    "e": [
+      "Familiar"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.7,
+    "rc": 276,
+    "la": 39.5672659,
+    "ln": 2.6283793,
+    "ad": "Carrer de Federico García Lorca, 4",
+    "id": "ChIJDXwAlQeTlxIRG3Md6IlSFqk",
+    "k": 0
+  },
+  {
+    "n": "SYNDEO Lounge & Restaurant",
+    "c": "Mediterránea",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.5,
+    "rc": 198,
+    "la": 39.5667083,
+    "ln": 2.62595,
+    "ad": "Carrer de Camilo José Cela, 5",
+    "id": "ChIJqwihtciTlxIRMquaX3-oOHU",
+    "k": 0
+  },
+  {
+    "n": "Restaurante Pino",
+    "c": "Mediterránea",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.0,
+    "rc": 514,
+    "la": 39.5714428,
+    "ln": 2.6521505,
+    "ad": "Plaça Major",
+    "id": "ChIJtxAMJoeTlxIRS3XgGA7PTG4",
+    "k": 0
+  },
+  {
+    "n": "Bodega Mayor",
+    "c": "Tapas",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.2,
+    "rc": 1396,
+    "la": 39.571098,
+    "ln": 2.6518934,
+    "ad": "Plaça Major, 11",
+    "id": "ChIJ6fm83naTlxIRvjHgDWjIVCE",
+    "k": 0
+  },
+  {
+    "n": "Bocalto",
+    "c": "Tapas",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Desayuno",
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.5,
+    "rc": 2773,
+    "la": 39.5714253,
+    "ln": 2.6502408,
+    "ad": "Plaça de Weyler, 8",
+    "id": "ChIJq8jKQFCSlxIRmIuf6Ixb-hM",
+    "k": 0
+  },
+  {
+    "n": "Brunchit Palma",
+    "c": "Café y postres",
+    "p": 2,
+    "d": [
+      "Vegano"
+    ],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida"
+    ],
+    "r": 4.6,
+    "rc": 2872,
+    "la": 39.5711693,
+    "ln": 2.6524401,
+    "ad": "Plaça Capellers, 2",
+    "id": "ChIJ2exNSdiTlxIRUjjWdlnVI0s",
+    "k": 0
+  },
+  {
+    "n": "Mesón Teresa",
+    "c": "Italiana",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Desayuno",
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.1,
+    "rc": 593,
+    "la": 39.5714099,
+    "ln": 2.6522184,
+    "ad": "Plaça Major, 8",
+    "id": "ChIJ1ZkCm6eTlxIRCyb_5uPOI4Y",
+    "k": 0
+  },
+  {
+    "n": "Jaime III Food & Drinks",
+    "c": "Mediterránea",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Desayuno",
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.3,
+    "rc": 276,
+    "la": 39.5730148,
+    "ln": 2.6426496,
+    "ad": "Passeig de Mallorca, 14B",
+    "id": "ChIJR7H9YFySlxIRQeWr4WeQoZ8",
+    "k": 0
+  },
+  {
+    "n": "La Bodeguilla",
+    "c": "Tapas",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.4,
+    "rc": 3166,
+    "la": 39.5717805,
+    "ln": 2.6471513,
+    "ad": "Carrer de Sant Jaume, 3",
+    "id": "ChIJY33x61qSlxIR5FlYm9BO-4E",
+    "k": 0
+  },
+  {
+    "n": "Vermuteria San Jaime",
+    "c": "Tapas",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.4,
+    "rc": 941,
+    "la": 39.5731073,
+    "ln": 2.642969,
+    "ad": "Passeig de Mallorca, 18",
+    "id": "ChIJg9vB9lOTlxIR3FWLOsvzG5k",
+    "k": 0
+  },
+  {
+    "n": "Cuit",
+    "c": "Mediterránea",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.4,
+    "rc": 813,
+    "la": 39.5722523,
+    "ln": 2.6433895,
+    "ad": "Avinguda de Jaume III, 21",
+    "id": "ChIJM2PzhFySlxIRRS04jDPC5H4",
+    "k": 0
+  },
+  {
+    "n": "Tast Club",
+    "c": "Tapas",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.4,
+    "rc": 1947,
+    "la": 39.5721763,
+    "ln": 2.6475879,
+    "ad": "Carrer de Sant Jaume, 6",
+    "id": "ChIJs9kq81qSlxIRSEaO0LxIZoM",
+    "k": 0
+  },
+  {
+    "n": "La Cueva",
+    "c": "Tapas",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.5,
+    "rc": 623,
+    "la": 39.5690305,
+    "ln": 2.6453273,
+    "ad": "Carrer dels Apuntadors, 5",
+    "id": "ChIJzw55euCTlxIRqoTH3dXcmpQ",
+    "k": 0
+  },
+  {
+    "n": "La Paloma",
+    "c": "Tapas",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.4,
+    "rc": 1877,
+    "la": 39.5690898,
+    "ln": 2.6452358,
+    "ad": "Carrer dels Apuntadors, 16",
+    "id": "ChIJq_8KwUSSlxIRUPTXejQYwQk",
+    "k": 0
+  },
+  {
+    "n": "La Cuadra del Maño",
+    "c": "Carnes y parrilla",
+    "p": 2,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 1718,
+    "la": 39.5706217,
+    "ln": 2.652394,
+    "ad": "Carrer del Miracle, 8",
+    "id": "ChIJA9gQ3VGSlxIR_rnSKfdOOOw",
+    "k": 0
+  },
+  {
+    "n": "Toque de Queda",
+    "c": "Mediterránea",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.7,
+    "rc": 1492,
+    "la": 39.5732364,
+    "ln": 2.6471458,
+    "ad": "Carrer de Can Cavalleria, 15B",
+    "id": "ChIJZQR3W1qSlxIRj_emwVMZFmE",
+    "k": 0
+  },
+  {
+    "n": "Andres Cosmopolis",
+    "c": "Mediterránea",
+    "p": 3,
+    "d": [
+      "Sin gluten"
+    ],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.8,
+    "rc": 833,
+    "la": 39.5723337,
+    "ln": 2.6391726,
+    "ad": "Carrer de la Fàbrica, 10",
+    "id": "ChIJQfIge12SlxIRouXeUOi852w",
+    "k": 0
+  },
+  {
+    "n": "Azuca - Urban Bistro",
+    "c": "Mediterránea",
+    "p": 3,
+    "d": [
+      "Sin gluten"
+    ],
+    "e": [],
+    "m": [
+      "Cena"
+    ],
+    "r": 5.0,
+    "rc": 1674,
+    "la": 39.572612,
+    "ln": 2.6374157,
+    "ad": "Carrer de la Fàbrica, 43",
+    "id": "ChIJwW3NPQCTlxIRRC63WmFnWzs",
+    "k": 0
+  },
+  {
+    "n": "Buscando el Norte",
+    "c": "Tapas",
+    "p": 3,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.3,
+    "rc": 1244,
+    "la": 39.5705915,
+    "ln": 2.6369088,
+    "ad": "Carrer de Sant Magí, 58",
+    "id": "ChIJJfkxplqTlxIR56ViJw0J_s0",
+    "k": 0
+  },
+  {
+    "n": "Mar y Tapas",
+    "c": "Tapas",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.4,
+    "rc": 876,
+    "la": 39.5681183,
+    "ln": 2.6447906,
+    "ad": "Plaça de la Llotja, 3a",
+    "id": "ChIJnW4R1fSTlxIRMgdEYe55Zhw",
+    "k": 0
+  },
+  {
+    "n": "Café la Lonja",
+    "c": "Café y postres",
+    "p": 2,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Desayuno",
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.3,
+    "rc": 806,
+    "la": 39.568442,
+    "ln": 2.644669,
+    "ad": "Carrer de la Llotja, 2",
+    "id": "ChIJfXqpkESSlxIRYVJbrCJOrBw",
+    "k": 0
+  },
+  {
+    "n": "La Caña",
+    "c": "Marisco",
+    "p": 3,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.3,
+    "rc": 1796,
+    "la": 39.5678631,
+    "ln": 2.6447771,
+    "ad": "Passeig de Sagrera, 3",
+    "id": "ChIJ9Xp0ASWTlxIR1gETzHExP1c",
+    "k": 0
+  },
+  {
+    "n": "Restaurant PESQUERO",
+    "c": "Marisco",
+    "p": 3,
+    "d": [],
+    "e": [
+      "Terraza"
+    ],
+    "m": [
+      "Desayuno",
+      "Comida",
+      "Cena"
+    ],
+    "r": 3.7,
+    "rc": 4387,
+    "la": 39.5685452,
+    "ln": 2.6422807,
+    "ad": "Muelle de la Lonja",
+    "id": "ChIJ4T3wgUKSlxIRpiOBJzlF8hU",
+    "k": 0
+  },
+  {
+    "n": "FORN de Sant Joan",
+    "c": "Tapas",
+    "p": 4,
+    "d": [],
+    "e": [],
+    "m": [
+      "Comida",
+      "Cena"
+    ],
+    "r": 4.6,
+    "rc": 2339,
+    "la": 39.5688868,
+    "ln": 2.6449578,
+    "ad": "Carrer de Sant Joan, 4",
+    "id": "ChIJKQSq6kSSlxIRx3Ty5-62TTw",
+    "k": 0
+  }
+]
