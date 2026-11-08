@@ -102,7 +102,6 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1.5px s
 .budget input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--accent);border:3px solid var(--ink)}
 .ticks{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted)}
 .lk{background:none;border:0;padding:0;font:inherit;font-weight:600;color:var(--brand);cursor:pointer;text-decoration:underline}
-/* Estilos para el mapa de Leaflet */
 #map {
   width: 100%;
   height: 350px;
@@ -112,7 +111,6 @@ footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1.5px s
   z-index: 1;
 }
 
-/* ===== Animaciones al hacer scroll + relleno de huecos ===== */
 .progress{position:fixed;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--brand));transform:scaleX(0);transform-origin:left;z-index:1000;pointer-events:none}
 #como h2,#publico h2,#cifras h2,.strip-sec h2{max-width:none}
 .w{display:inline-block;vertical-align:top;overflow:hidden;padding-bottom:.15em;margin-bottom:-.15em}
@@ -404,7 +402,6 @@ function mapsUrl(){
 function link(t,u){const a=document.createElement('a');a.textContent=t;a.href=u;a.target='_blank';a.rel='noopener';return a}
 const fmt=x=>x.toFixed(1).replace('.',',');
 
-// Inicializar el mapa de Leaflet
 const map = L.map('map').setView([CENTER.lat, CENTER.lng], 14);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png?api_key=cb1_4zim_1_1463b8c79a5207727aac553d', {
@@ -534,7 +531,6 @@ cargarRestaurantes();
 const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
 const fmtN=(v,dec)=>v.toLocaleString('es-ES',{minimumFractionDigits:dec,maximumFractionDigits:dec});
 
-/* Titulares: cada palabra sube desde una máscara */
 document.querySelectorAll('h1,h2').forEach(h=>{
   if(h.closest('.demo'))return;
   const words=h.textContent.trim().split(/\s+/);
@@ -548,7 +544,6 @@ document.querySelectorAll('h1,h2').forEach(h=>{
   });
 });
 
-/* Contadores */
 function runCount(el){
   const t=+el.dataset.t,dec=+el.dataset.dec||0;
   if(rm){el.textContent=fmtN(t,dec);return}
@@ -563,7 +558,6 @@ window.statsFromData=P=>{
   n.forEach((el,i)=>{el.dataset.t=vals[i];if(el._seen)runCount(el);else el.textContent=fmtN(vals[i],+el.dataset.dec||0)});
 };
 
-/* Revelado al hacer scroll */
 const targets=document.querySelectorAll('[data-split],[data-a],.steps li');
 if('IntersectionObserver' in window){
   const io=new IntersectionObserver(es=>es.forEach(e=>{
@@ -576,7 +570,6 @@ if('IntersectionObserver' in window){
   targets.forEach(el=>el.classList.add('in'));
 }
 
-/* Barra de progreso y pizza giratoria ligada al scroll */
 const prog=document.getElementById('prog'),bp=document.getElementById('bp');let tick=false;
 function onScroll(){
   if(tick)return;tick=true;
